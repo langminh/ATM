@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E12AF717-716D-4C8F-8F19-9EE5B5E8BDDD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>M_ATM</RootNamespace>
+    <AssemblyName>M_ATM</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExtentionMethod.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Temp.cs" />
+    <Compile Include="UC\BeginUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\BeginUC.Designer.cs">
+      <DependentUpon>BeginUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\MainUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\MainUC.Designer.cs">
+      <DependentUpon>MainUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC1\Validation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC1\Validation.Designer.cs">
+      <DependentUpon>Validation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC2\BeingFinal_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC2\BeingFinal_UC.Designer.cs">
+      <DependentUpon>BeingFinal_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC2\Final_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC2\Final_UC.Designer.cs">
+      <DependentUpon>Final_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC2\WithDraw.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC2\WithDraw.Designer.cs">
+      <DependentUpon>WithDraw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC2\WithDraw_Chosse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC2\WithDraw_Chosse.Designer.cs">
+      <DependentUpon>WithDraw_Chosse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC3\CheckBanlance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC3\CheckBanlance.Designer.cs">
+      <DependentUpon>CheckBanlance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC4\Popup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC\UC4\Popup.Designer.cs">
+      <DependentUpon>Popup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC4\ViewHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC4\ViewHistory.Designer.cs">
+      <DependentUpon>ViewHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC5\CardTranfer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC5\CardTranfer.Designer.cs">
+      <DependentUpon>CardTranfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC6\ChangePIN.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC6\ChangePIN.Designer.cs">
+      <DependentUpon>ChangePIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_ThongBao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_ThongBao.Designer.cs">
+      <DependentUpon>UC_ThongBao.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UC\BeginUC.resx">
+      <DependentUpon>BeginUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\MainUC.resx">
+      <DependentUpon>MainUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC1\Validation.resx">
+      <DependentUpon>Validation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC2\BeingFinal_UC.resx">
+      <DependentUpon>BeingFinal_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC2\Final_UC.resx">
+      <DependentUpon>Final_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC2\WithDraw.resx">
+      <DependentUpon>WithDraw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC2\WithDraw_Chosse.resx">
+      <DependentUpon>WithDraw_Chosse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC3\CheckBanlance.resx">
+      <DependentUpon>CheckBanlance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC4\Popup.resx">
+      <DependentUpon>Popup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC4\ViewHistory.resx">
+      <DependentUpon>ViewHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC5\CardTranfer.resx">
+      <DependentUpon>CardTranfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC6\ChangePIN.resx">
+      <DependentUpon>ChangePIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_ThongBao.resx">
+      <DependentUpon>UC_ThongBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UC\UC7\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUL\BUL.csproj">
+      <Project>{0e8427b8-c64a-4b13-a45a-e57f53e7ef35}</Project>
+      <Name>BUL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{07fd228b-f798-49d3-bfdd-7d0528f61024}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\600x400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1642018_154941139_BI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1892015_154119938_BIDV.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2582015_81733335_BIDV.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3172015_135324342_BIDV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bidv.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagessubsite_4Banner-MasterCard_final.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printads-ngang-1493087749088.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
